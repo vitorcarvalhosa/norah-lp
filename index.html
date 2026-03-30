@@ -1398,79 +1398,115 @@
     /* ── SECTION CTA ALIGN ────────────────────────── */
     .sec-cta { text-align: center; margin-top: 44px; }
 
-    /* ── MOBILE GLOBAL FIXES ─────────────────────── */
+    /* ── MOBILE (≤ 640px) ───────────────────────── */
     @media (max-width: 640px) {
+      .wrap { padding: 0 16px; }
+      .pad { padding: 56px 0; }
 
-      /* Wrap padding mais generoso nos lados */
-      .wrap { padding: 0 18px; }
-      .pad { padding: 60px 0; }
+      /* Header: botão compacto, só ícone + texto curto */
+      .hdr-in { padding: 14px 16px; }
+      .hdr-logo { font-size: 1.1rem; }
+      .hdr-cta .btn { padding: 9px 14px; font-size: .7rem; gap: 6px; }
+      .hdr-cta .btn svg { width: 14px; height: 14px; }
 
       /* Hero */
-      .hero-name { font-size: clamp(3.5rem, 18vw, 5.5rem); }
-      .hero-h1 { font-size: 1rem; }
-      .hero-tagline { font-size: .95rem; }
+      .hero-name { font-size: clamp(3.2rem, 16vw, 5rem); }
+      .hero-tagline { font-size: .9rem; }
+      .hero-h1 { font-size: .95rem; margin-bottom: 24px; }
+      .hero-bullets { grid-template-columns: 1fr; gap: 10px; margin-bottom: 28px; }
       .hero-ctas { flex-direction: column; }
       .hero-ctas .btn { width: 100%; justify-content: center; }
-      .hero-proof { gap: 12px; }
+      .hero-proof { flex-direction: column; gap: 10px; }
+      .proof-tags { gap: 6px; }
+      .hero-badge { font-size: .6rem; letter-spacing: .2em; padding: 6px 13px; }
 
-      /* Eyebrow label menor */
-      .eye { font-size: .6rem; letter-spacing: .22em; }
+      /* Typography */
+      .h2 { font-size: clamp(1.35rem, 6.5vw, 1.8rem); }
+      .eye { font-size: .58rem; letter-spacing: .2em; }
+      .sub { font-size: .9rem; }
 
-      /* H2 menor em mobile */
-      .h2 { font-size: clamp(1.4rem, 7vw, 1.9rem); }
+      /* Services: 2 colunas compactas */
+      .srv-grid { grid-template-columns: 1fr 1fr; }
+      .srv-card { padding: 20px 14px; }
+      .srv-icon { font-size: 1.4rem; margin-bottom: 8px; }
+      .srv-name { font-size: .78rem; }
+      .srv-desc { font-size: .78rem; }
 
-      /* Services: 1 coluna em tela muito pequena */
-      .srv-grid { grid-template-columns: 1fr; }
+      /* Process: coluna única */
+      .steps { grid-template-columns: 1fr; gap: 0; }
+      .steps::before { left: 27px; top: 0; bottom: 0; transform: none; }
+      .step { flex-direction: row !important; text-align: left !important; padding-bottom: 32px; gap: 16px; }
+      .step:last-child { padding-bottom: 0; }
+      .step-n { width: 44px; height: 44px; font-size: .7rem; }
+      .step-title { font-size: .85rem; }
+      .step-desc { font-size: .85rem; }
 
-      /* Pillars 5P: 1 coluna */
-      .pillars { grid-template-columns: 1fr; }
-      .pillar-l { font-size: 2rem; }
+      /* Method 5P: 2 colunas */
+      .pillars { grid-template-columns: 1fr 1fr; }
+      .pillar { padding: 20px 14px; }
+      .pillar-l { font-size: 1.8rem; }
+      .pillar-n { font-size: .65rem; }
+      .pillar-d { font-size: .75rem; }
 
-      /* Comparison: empilha em mobile */
-      .compare-grid { grid-template-columns: 1fr; }
+      /* For Whom: 1 coluna */
+      .profiles { grid-template-columns: 1fr; }
+      .profile:last-child:nth-child(3n+1) { grid-column: auto; max-width: none; margin: 0; }
+      .profile { padding: 20px 18px; }
+
+      /* Comparison: 1 coluna */
+      .compare-grid { grid-template-columns: 1fr; gap: 16px; }
 
       /* Testimonials: 1 coluna */
       .testi-grid { grid-template-columns: 1fr; }
 
-      /* About: coluna única, imagem menor */
-      .about-grid { grid-template-columns: 1fr; }
-      .about-visual { max-width: 280px; margin: 0 auto; }
-      .about-img { aspect-ratio: 1/1; }
+      /* About */
+      .about-grid { grid-template-columns: 1fr; gap: 28px; }
+      .about-visual { max-width: 240px; margin: 0 auto; }
+      .about-img { aspect-ratio: 3/4; }
+      .about-bio { font-size: .9rem; }
 
-      /* Gallery: 2 colunas, altura menor */
-      .gallery-strip { grid-template-columns: repeat(2, 1fr); height: 160px; }
+      /* Gallery */
+      .gallery-strip { grid-template-columns: repeat(3, 1fr); height: 130px; }
 
-      /* Pricing: 1 coluna */
+      /* Pricing */
       .price-grid { grid-template-columns: 1fr; max-width: 100%; }
+      .price-card { padding: 24px 20px; }
 
       /* FAQ */
-      .faq-q { font-size: .85rem; padding: 16px 16px; }
-      .faq-a-in { padding: 12px 16px 16px; }
+      .faq-q { font-size: .83rem; padding: 15px 14px; }
+      .faq-a-in { padding: 10px 14px 15px; font-size: .85rem; }
 
       /* Final CTA */
-      #cta-final { padding: 80px 0; }
-      .cta-name { font-size: clamp(1.6rem, 8vw, 2.4rem); }
-      #cta-final .btn { width: 100%; justify-content: center; padding: 16px 24px; font-size: .85rem; }
-      .cta-phones { flex-direction: column; gap: 8px; align-items: center; }
+      #cta-final { padding: 72px 0; }
+      .cta-name { font-size: clamp(1.5rem, 7.5vw, 2.2rem); }
+      .cta-sub { font-size: .9rem; }
+      #cta-final .btn { width: 100%; justify-content: center; padding: 16px 20px; font-size: .85rem; }
+      .cta-phones { flex-direction: column; gap: 6px; align-items: center; }
 
       /* Footer */
-      .footer-row { flex-direction: column; gap: 16px; }
+      .footer-row { flex-direction: column; gap: 14px; }
+      .footer-brand { font-size: 1rem; }
 
-      /* Float WPP menor */
-      .wpp-fab { width: 50px; height: 50px; bottom: 16px; right: 16px; }
+      /* WPP FAB */
+      .wpp-fab { width: 50px; height: 50px; bottom: 16px; right: 14px; }
       .wpp-fab svg { width: 24px; height: 24px; }
 
-      /* Sec CTA botões full width */
+      /* Sec CTA */
       .sec-cta .btn { width: 100%; }
     }
 
-    /* ── TABLET TWEAKS (641–900px) ───────────────── */
+    /* ── TABLET (641–900px) ──────────────────────── */
     @media (min-width: 641px) and (max-width: 900px) {
       .hero-wrap { grid-template-columns: 1fr; }
       .hero-visual { display: none; }
+      .hero-bullets { grid-template-columns: 1fr 1fr; }
       .pillars { grid-template-columns: repeat(3, 1fr); }
+      .profiles { grid-template-columns: repeat(2, 1fr); }
+      .profile:last-child:nth-child(3n+1) { grid-column: auto; max-width: none; margin: 0; }
+      .profile:last-child:nth-child(odd) { grid-column: 1 / -1; max-width: 380px; margin: 0 auto; }
       .price-grid { grid-template-columns: 1fr; max-width: 480px; margin-left: auto; margin-right: auto; }
-      .about-grid { grid-template-columns: 280px 1fr; gap: 40px; }
+      .about-grid { grid-template-columns: 260px 1fr; gap: 36px; }
+      .gallery-strip { height: 200px; }
     }
   </style>
 </head>

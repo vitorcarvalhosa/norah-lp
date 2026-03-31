@@ -93,7 +93,8 @@
   <style>
     /* ── RESET ────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; overflow-x: hidden; max-width: 100vw; }
+    body { overflow-x: hidden; max-width: 100vw; }
 
     :root {
       --bg:          #050810;
@@ -430,8 +431,8 @@
 
     .hero-orb {
       position: absolute;
-      top: 15%; right: 8%;
-      width: 420px; height: 420px;
+      top: 15%; right: 0;
+      width: min(420px, 80vw); height: min(420px, 80vw);
       background: radial-gradient(circle, rgba(0,200,255,.09) 0%, transparent 68%);
       border-radius: 50%;
       pointer-events: none;
@@ -972,7 +973,7 @@
     .about-placeholder-text { font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--text3); }
     .about-corner {
       position: absolute;
-      bottom: -12px; right: -12px;
+      bottom: -12px; right: 0;
       width: 96px; height: 96px;
       border: 2px solid var(--accent);
       border-radius: var(--r);
@@ -1228,7 +1229,7 @@
       position: absolute;
       top: 50%; left: 50%;
       transform: translate(-50%, -50%);
-      width: 560px; height: 560px;
+      width: min(560px, 90vw); height: min(560px, 90vw);
       background: radial-gradient(circle, rgba(255,45,120,.07) 0%, rgba(0,200,255,.05) 45%, transparent 70%);
       border-radius: 50%;
       pointer-events: none;

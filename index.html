@@ -944,6 +944,14 @@
       transition: color .2s ease, border-color .2s ease;
     }
     .client-chip:hover { color: var(--text2); border-color: rgba(255,255,255,.16); }
+    /* Palco de maior peso (Rock in Rio) em destaque */
+    .proof-tag.is-destaque,
+    .client-chip.is-destaque {
+      color: #fff;
+      border-color: var(--accent);
+      background: rgba(0,200,255,.1);
+      box-shadow: 0 0 18px rgba(0,200,255,.3);
+    }
 
     /* ── ABOUT ────────────────────────────────────── */
     #about { background: var(--bg2); }
@@ -1536,13 +1544,14 @@
             <a href="#pricing" class="btn btn-ghost">Ver Pacotes</a>
           </div>
 
-          <div class="hero-proof" aria-label="Clientes que já confiaram na NORAH">
-            <span class="proof-label">Quem já confiou</span>
+          <div class="hero-proof" aria-label="Palcos onde a NORAH já cantou">
+            <span class="proof-label">Já cantou no</span>
             <div class="proof-tags">
-              <span class="proof-tag">West Shopping</span>
+              <span class="proof-tag is-destaque">★ Rock in Rio</span>
+              <span class="proof-tag">Só Música Boa</span>
               <span class="proof-tag">Mandarim</span>
               <span class="proof-tag">Arena Festival</span>
-              <span class="proof-tag">Música Boa Ao Vivo</span>
+              <span class="proof-tag">Teatro Firjan SESI</span>
             </div>
           </div>
         </div>
@@ -1809,13 +1818,13 @@
       </div>
 
       <div class="clients-strip reveal" style="transition-delay:.24s">
-        <p class="clients-label">Clientes e Parceiros</p>
-        <div class="clients-row" role="list" aria-label="Clientes da NORAH">
-          <span class="client-chip" role="listitem">Música Boa Ao Vivo</span>
-          <span class="client-chip" role="listitem">West Shopping</span>
+        <p class="clients-label">Palcos onde a Norah já cantou</p>
+        <div class="clients-row" role="list" aria-label="Palcos onde a NORAH já cantou">
+          <span class="client-chip is-destaque" role="listitem">★ Rock in Rio</span>
+          <span class="client-chip" role="listitem">Só Música Boa</span>
           <span class="client-chip" role="listitem">Mandarim</span>
           <span class="client-chip" role="listitem">Arena Festival</span>
-          <span class="client-chip" role="listitem">Fantástico Magic</span>
+          <span class="client-chip" role="listitem">Teatro Firjan SESI Jacarepaguá</span>
         </div>
       </div>
 
